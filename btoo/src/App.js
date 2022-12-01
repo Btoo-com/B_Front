@@ -1,8 +1,10 @@
 import './components/Header/Header.css';
 import Login from './components/Login/Login';
 import Signup from './components/Login/Signup';
-import Chat from './components/Chat/Chat';
+import React from 'react';
+import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import WordRelay from './components/Chat/WordRelay';
 function App() {
   return (
     <div>
@@ -10,7 +12,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Login/>}></Route>
           <Route path='/signup' element={<Signup/>}></Route>
-          <Route path='/chat' element={<Chat />}></Route>
+          <Route path='/WordRelay' element={<WordRelay/>}></Route>
         </Routes>
       </Router>
     </div>

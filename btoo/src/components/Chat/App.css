@@ -1,0 +1,125 @@
+/* .card {
+    display: grid;
+    background-color: lightcyan;
+    width: 100%;
+    height: 712px;
+  }
+  form {
+    background-color: antiquewhite;
+    width: 500px;
+    height: 60px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 550px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+  }
+  .texting {
+    width: 500px;
+  }
+zfname-field {
+    margin-bottom: 40px;
+  }
+  
+button {
+    display: none;
+    margin-top: 20px;
+    padding: 10px;
+    background: transparent;
+    border-radius: 5px;
+  }
+  
+  .render-chat1 {
+    position: absolute;
+    z-index: 1;
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    background-color: white;
+    font-size: 30px;
+  }
+  .render-chat2 {
+    position: absolute;
+    width: 210px;
+    height: 170px;
+    border-radius: 5px;
+    margin-left: 70%;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    background-color: white;
+    font-size: 30px;
+  }
+  .render-chat3 {
+    position: absolute;
+    width: 170px;
+    height: 140px;
+    margin-left: 95%;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+    text-align: center;
+    background-color: white;
+    font-size: 30px;
+  }
+  .all-render {
+    position: absolute;
+    width: 700px;
+    margin-left: 41%;
+    margin-top: 10%;
+  }
+  h3 {
+    color: #2f72da;
+    display: inline;
+  }
+  
+  span {
+    color: black;
+    display: inline;
+  }
+  .chatboxing{
+    position: absolute;
+    width: 10.w;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 5%;
+    text-align: center;
+    line-height: 100px;
+    max-lines: 5;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .chatboxing2{
+    position: absolute;
+    width: 10.w;
+    height: 100px;
+    margin-top: 30px;
+    text-align: center;
+    line-height: 100px;
+    max-lines: 5;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .chatloging {
+    width: 200px;
+    float: left;
+    text-align: justify;
+    padding-left: 0px;
+    writing-mode: horizontal-tb;
+    overflow: inherit;
+  }
+  .preview {
+    position: absolute;
+    margin-left:  40%;
+    background-color: white;
+    width: 300px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    overflow:hidden;
+  } */
