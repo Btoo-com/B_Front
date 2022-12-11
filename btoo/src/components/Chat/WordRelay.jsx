@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useCallback, useRef, useLayoutEffect } from 'react';
 import HanTools from 'hangul-tools';
+import './WordRelay.css';
 export default function WordRelay() {
     const startWords = ["우리말", "끝말잇기", "최병준"]
     const index = Math.floor(Math.random() * 3)
