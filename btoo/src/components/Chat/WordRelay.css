@@ -1,0 +1,47 @@
+.wordrelaybg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+.prev {
+    background-color: white;
+    width: 30%;
+    height: 20%;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 10vh;
+}
+.ug {
+    position: absolute;
+    background-color: black;
+    width: 10%;
+    height: 5%;
+    left: 50%;
+    border-radius: 5px;
+    transform: translateX(-50%);
+}
+.prevb {
+    position: absolute;
+    background-color: black;
+    width: 28.5%;
+    height: 17%;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.pword {
+    font-size: 23px;
+    font-weight: bold;
+    margin-top: -4.5%;
+    color:white;
+}
+.prevword {
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 23px;
+    color:white;
+    font-family: "Kyobo";
+}
