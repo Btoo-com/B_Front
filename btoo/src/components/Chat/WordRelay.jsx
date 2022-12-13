@@ -4,7 +4,7 @@ import HanTools from 'hangul-tools';
 import './WordRelay.css';
 import axios from 'axios';
 export default function WordRelay() {
-    const startWords = ["우리말", "끝말잇기", "최병준"]
+    const startWords = ["우리말", "끝말잇기", "시간표"]
     const index = Math.floor(Math.random() * 3)
     const starting = startWords[index];
     let [prev, setPrev] = useState(`${starting}`);
@@ -19,7 +19,7 @@ export default function WordRelay() {
         if (time === 0) {
             alert(`시간이 종료되었습니다 게임에서 탈락됩니다`)
         } else {
-            time -= 1
+            time -= 1;
         }
     }
     async function checking() {
@@ -29,14 +29,17 @@ export default function WordRelay() {
             setJudges(true);
         } catch (error) {
             console.error(error);
-            console.log('니 좆된듯  ');
+            setJudges(false);
             alert('웅 너 탈락이양 ^^');
             setWord('');
             window.location.replace("/WordRelay")
         }
     }
     const submit = () => {
-        if (word.length > 1 && HanTools.dueum(prev[prev.length - 1]) === word[0]) {
+        if(word.length < 1){
+            alert("단어를 입력하고 엔터키를 눌러주세요~!");
+        }
+        else if (word.length > 1 && HanTools.dueum(prev[prev.length - 1]) === word[0]) {
             checking();
             if(judges == true){
             let okay = 'O';
@@ -70,8 +73,8 @@ export default function WordRelay() {
                         <p className='prevword'>{prev}</p>
                     </div>
                 </div>
-                <input onChange={change} value={word} onKeyPress={onKeyPress} autoFocus />
-                <button onClick={submit}>입력!</button>
+                <input onChange={change} value={word} onKeyPress={onKeyPress} autoFocus className='wordbox' />
+                <button onClick={submit} className='pressing'>입력!</button>
                 <div>{result}</div>
             </div>
         </>

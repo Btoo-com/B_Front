@@ -2,7 +2,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: thistle;
     text-align: center;
 }
 .prev {
@@ -15,7 +15,7 @@
 }
 .ug {
     position: absolute;
-    background-color: black;
+    background-color: thistle;
     width: 10%;
     height: 5%;
     left: 50%;
@@ -24,7 +24,7 @@
 }
 .prevb {
     position: absolute;
-    background-color: black;
+    background-color: thistle;
     width: 28.5%;
     height: 17%;
     top: 20%;
@@ -44,4 +44,28 @@
     font-size: 23px;
     color:white;
     font-family: "Kyobo";
+}
+.wordbox {
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 28.5%;
+    text-align: center;
+    width: 28%;
+    height: 5%;
+    border: 0;
+    border-radius: 3px;
+}
+.pressing {
+    position: fixed;
+    top: 40%;
+    width: 6%;
+    height: 5%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+    border: 0;
+    background-color: white;
+    color: black;
+    font-weight: bold;
 }
