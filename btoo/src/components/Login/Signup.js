@@ -1,28 +1,49 @@
 import './login.css';
+import react from 'react';
+import { useState } from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 export default function Signup() {
+    const [grade, setGrade] = useState();
+    const [cla, setCla] = useState();
+    const [name, setName] = useState();
+    const [pwd, setPwd] = useState();
+    const nav = useNavigate();
+    const onsubmit = (e) => {
+        e.preventDefault();
+        const form = new FormData();
+        form.append('password', pwd);
+        form.append('nickname', name);
+        form.append('grade', grade);
+        form.append('ban', cla);
+        form.append('score', 0);
+        axios.post('http://localhost:3031/signup', form)
+        .then((res) => {
+            console.log(res);
+            if (res.data){
+                alert("회원가입 성공!!!");
+                nav('/mainpage')
+            } 
+            else alert("회원가입 실패!!!");
+        })
+        .catch((e) => {
+            console.error(e);
+        })
+    }
     return (
-        <div>
+        <div className='loginpg'>
             <h1>회원가입</h1>
-            <h2>학년</h2>
-            <div>
-                <input type="radio" name="grade" id='1grade'/><label for="1grade">1학년</label>
-                <input type="radio" name="grade" id='2grade'/><label for="2grade">2학년</label>
-                <input type="radio" name="grade" id='3grade'/><label for="3grade">3학년</label>
-            </div>
-            <h2>반</h2>
-            <div>
-                <input type="radio" name="class" id='classone' /><label for="classone">1반</label>
-                <input type="radio" name="class" id='classtwo' /><label for="classtwo">2반</label>
-                <input type="radio" name="class" id='classthird' /><label for="classthird">3반</label>
-                <input type="radio" name="class" id='classfourth' /><label for="classfourth">4반</label>
-            </div>
-            <h2>닉네임</h2>
-            <input type="text" placeholder="닉네임을 입력해주세요"></input>
-            <h2>아이디, 비밀번호</h2>
-            <input type="text" placeholder="아이디를 입력해주세요"></input>
-            <input type="text" placeholder="비밀번호 입력해주세요"></input>
-            <input type="text" placeholder="비밀번호 확인"></input>
-            <button><text>가입하기</text></button>
+            <form onSubmit={onsubmit}>
+                <label>학년 ex - 1학년</label>
+                <input type="text" value={grade} onChange={(e) => setGrade(e.target.value)}></input><br/>
+                <label>반</label>
+                <input type="text" value={cla} onChange={(e) => setCla(e.target.value)}/><br/>
+                <label>닉네임</label>
+                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="닉네임을 입력해주세요"></input><br/>
+                <label>비밀번호</label>
+                <input type="password" value={pwd} onChange={(e) => setPwd(e.target.value)} placeholder="비밀번호 입력해주세요"></input><br/>
+                <button type='submit'><text>가입하기</text></button>
+            </form>
         </div>
     );
 }

@@ -13,7 +13,10 @@ const io = require('socket.io')(server,{
 io.on('connection', socket=>{
     socket.on('message',({name, message}) => {
         io.emit('message',({name, message}))
-        //io.emit('prev', ({named, prev}))
+    })
+
+    socket.on('room message', (msg)=>{
+        io.emit('room message', msg);
     })
 })
 

@@ -1,42 +1,36 @@
 import "./login.css";
 import react from 'react';
-import { useState } from "react";
+import { useRef, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from 'axios';
+
 export default function Login() {
-    const id = "202110302@bssm.hs.kr";
-    const pw = "12345678910";
-    const nav = useNavigate();
-    const [writeid, setWriteid] = useState("");
-    const [writepw, setWritepw] = useState("");
-    const onChangeid = (e) => {
-        setWriteid(e.target.value);
+  const nav = useNavigate();
+  const [ide, setIde] = useState('');
+  const [pw, setPw] = useState('');
+  const [errMsg, setErrMsg] = useState('');
+  function gosignup() {
+    nav('/signup')
+  }
+  const onKeyPress = (e) => {
+    if(e.key == 'Enter'){
+      printing();
     }
-    const onChangepw = (e) => {
-        setWritepw(e.target.value);
-    }
-    function printing() {
-        if(writeid == id && writepw == pw){
-            alert("로그인 성공 하셨습니다!");
-            nav('/wordRelay');
-        }
-        else {
-            alert('로그인 실패! 아이디/비밀번호를 확인해 주세요.');
-        }
-    }
-    const onKeyPress = (e) => {
-        if (e.key == 'Enter') {
-            printing();
-        }
-    }
+  }
+  function printing() {
+    nav('/wordRelay');
+  }
     return (
         <div className="loginpg">
-            <p className="logm">로그인</p>
-            <input type="text" className="logintext" placeholder="아이디를 입력해주세용" onChange={onChangeid}/>
-            <input type="password" className="passwordtext" placeholder="비밀번호를 입력해주세용" onChange={onChangepw}/>
+            <p className="logm">Btoo.com</p>
+            <form>
+            <input type="text" className="logintext" placeholder="닉네임을 입력해주세용" onChange={(e)=> setIde(e.target.value)}/>
+            <input type="password" className="passwordtext" placeholder="비밀번호를 입력해주세용" onChange={(e) => setPw(e.target.value)}/>
             <div className="letlog" onClick={printing} onKeyPress={onKeyPress}>
                 <p id="letgo">Login!</p>
             </div>
-            <div className="letsign">
+            </form>
+            <div className="letsign" onClick={gosignup}>
                 <p id="letsignup">Signup!</p>
             </div>
         </div>

@@ -2,3 +2,11 @@
     font-family: "Kyobo";
     src: url('./fonts/KyoboHandwriting2020pdy.ttf');
 }
+@font-face {
+    font-family: "Mapleb";
+    src: url('./fonts/Maplebold.ttf');
+}
+@font-face {
+    font-family: "Maplel";
+    src: url('./fonts/Maplelight.ttf');
+}
