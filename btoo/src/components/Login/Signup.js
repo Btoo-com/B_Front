@@ -1,4 +1,5 @@
 import './login.css';
+import './Signup.css';
 import react from 'react';
 import { useState } from 'react';
 import axios from 'axios';
@@ -32,17 +33,17 @@ export default function Signup() {
     }
     return (
         <div className='loginpg'>
-            <h1>회원가입</h1>
-            <form onSubmit={onsubmit}>
-                <label>학년 ex - 1학년</label>
-                <input type="text" value={grade} onChange={(e) => setGrade(e.target.value)}></input><br/>
-                <label>반</label>
-                <input type="text" value={cla} onChange={(e) => setCla(e.target.value)}/><br/>
-                <label>닉네임</label>
-                <input type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="닉네임을 입력해주세요"></input><br/>
-                <label>비밀번호</label>
-                <input type="password" value={pwd} onChange={(e) => setPwd(e.target.value)} placeholder="비밀번호 입력해주세요"></input><br/>
-                <button type='submit'><text>가입하기</text></button>
+            <h1 className='titlesign'>회원가입</h1>
+            <form onSubmit={onsubmit} className="signform">
+                <label className='gradel'>학년 ex - 1 </label>
+                <input className='gradetext' type="text" value={grade} onChange={(e) => setGrade(e.target.value)}></input><br/>
+                <label className='gradec'>반</label>
+                <input className='classtext' type="text" value={cla} onChange={(e) => setCla(e.target.value)}/><br/>
+                <label className='graden'>닉네임</label>
+                <input className='passwordt' type="text" value={name} onChange={(e) => setName(e.target.value)} placeholder="닉네임을 입력해주세요"></input><br/>
+                <label className='gradep'>비밀번호</label>
+                <input className='passwordty' type="password" value={pwd} onChange={(e) => setPwd(e.target.value)} placeholder="비밀번호 입력해주세요"></input><br/>
+                <button type='submit' className='signupbutton'><text>가입하기</text></button>
             </form>
         </div>
     );

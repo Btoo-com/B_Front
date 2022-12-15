@@ -1,0 +1,54 @@
+.titlesign {
+    position: absolute;
+    font-family: "Mapleb";
+    font-size: 40px;
+    margin-left: 60px;
+    margin-top: 60px;
+}
+.signform {
+    margin-left: 50%;
+    margin-top: 15%;
+    transform: translateX(-20%);
+    text-align: left;
+}
+.gradel {
+    font-family: "Mapleb";
+    font-size: 30px;
+}
+.gradetext {
+    margin-left: 20px;
+    height: 30px;
+}
+.gradec {
+    font-family: "Mapleb";
+    font-size: 30px;
+}
+.classtext {
+    margin-left: 20px;
+    height: 30px;
+}
+.passwordt {
+    margin-left: 20px;
+    height: 30px;
+}
+.passwordty {
+    margin-left: 20px;
+    height: 30px;
+}
+.graden {
+    font-family: "Mapleb";
+    font-size: 30px;
+}
+.gradep {
+    font-family: "Mapleb";
+    font-size: 30px;
+}
+
+.signupbutton {
+    width: 45%;
+    height: 30%;
+    margin-top: 10%;
+    background-color: thistle;
+    border-radius: 5px;
+    color: black;
+}
