@@ -7,7 +7,7 @@ export default function Gameroom() {
     const nav = useNavigate();
     const [lists, setLists] = useState([]);
     function making() {
-        nav('/makeroom')
+        nav('/wordRelay')
     }
     useEffect(() => {
         (async () => {
@@ -28,24 +28,20 @@ export default function Gameroom() {
             }
         })();
     }, [])
-    function goroom() {
-        nav('/wordRelay');
-    }
     return (
         <div className='mih'>
-            <button onClick={making} className="makr"><text>방만들기</text></button>
+            <button onClick={making} className="makr"><text>게임시작</text></button>
             <div className='roombg'>
                 <div className='listt'>
-                    <h1 className='listitle'>조수현의 방</h1>
+                    <h1 className='listitle'>수현의 방</h1>
                 </div>
                 <div className='wow'>
                 {/* {lists.map((e) => ( */}
-                    <div>
-                        <p className='roomid'>김준서님</p>
+                    <div className='rooming'>
+                        <p className='roomid'>수현님</p>
                     </div>
                 {/* ))} */}
                 </div>
-                <button onClick={goroom}>게임시작</button>
             </div>
         </div>
     )

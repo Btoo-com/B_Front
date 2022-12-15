@@ -13,16 +13,16 @@ export default function Gameroom2() {
         (async () => {
             try {
                 axios.get('http://localhost:3031/getrooms')
-                .then((res) => {
-                    setLists(res.data);
-                    // let lengths = (res.data).length;
-                    // for(let i = 0; i < lengths; i++) {
-                    //     setLists([...lists, res.data[i]]);
-                    // }
-                    // let list = <ul>
-                    //     {lists.map((value, index) => <li key={index}> {value}</li>)}
-                    // </ul>
-                })
+                    .then((res) => {
+                        setLists(res.data);
+                        // let lengths = (res.data).length;
+                        // for(let i = 0; i < lengths; i++) {
+                        //     setLists([...lists, res.data[i]]);
+                        // }
+                        // let list = <ul>
+                        //     {lists.map((value, index) => <li key={index}> {value}</li>)}
+                        // </ul>
+                    })
             } catch (error) {
                 console.log('error');
             }
@@ -33,20 +33,21 @@ export default function Gameroom2() {
     }
     return (
         <div className='mih'>
-            <button onClick={making} className="makr"><text>방만들기</text></button>
+            <button onClick={goroom} className="makr"><text>방만들기</text></button>
             <div className='roombg'>
                 <div className='listt'>
-                    <h1 className='listitle'>조수현의 방</h1>
+                    <h1 className='listitle'>수현의 방</h1>
                 </div>
                 <div className='wow'>
-                {/* {lists.map((e) => ( */}
-                    <div>
-                        <p className='roomid'>김준서님</p>
-                        <p className='roomid'>조수현님</p>
+                    {/* {lists.map((e) => ( */}
+                    <div className='rooming'>
+                        <p className='roomid'>수현님</p>
                     </div>
-                {/* ))} */}
+                    <div className='rooming2'>
+                        <p className='roomid2'>김준서님</p>
+                    </div>
+                    {/* ))} */}
                 </div>
-                <button onClick={goroom}>게임시작</button>
             </div>
         </div>
     )
